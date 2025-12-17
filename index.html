@@ -750,5 +750,82 @@
         }
         updateDisplay();
     </script>
+ <!-- Floating Buy Me a Coffee Button -->
+<div id="coffee-container">
+  <div id="coffee-message">
+    Thanks for using this virtual timer! ⏱️<br>
+    If you'd like to support, you can buy me a coffee ☕
+  </div>
+
+  <a
+    href="https://buymeacoffee.com/katyc"
+    target="_blank"
+    id="coffee-button"
+    aria-label="Buy me a coffee"
+  >
+    ☕
+  </a>
+</div>
+
+<style>
+  #coffee-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  #coffee-message {
+    background: #ffffff;
+    color: #333;
+    padding: 10px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    font-size: 14px;
+    max-width: 220px;
+    margin-bottom: 8px;
+    animation: fadeIn 0.6s ease;
+  }
+
+  #coffee-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #ffdd00;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 26px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  #coffee-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Mobile-friendly */
+  @media (max-width: 480px) {
+    #coffee-message {
+      font-size: 13px;
+      max-width: 180px;
+    }
+  }
+</style>
+
 </body>
 </html>
